@@ -1,17 +1,25 @@
-// Home Showcase Slider every 5 seconds
-//Write a Function that changes the photo of the slideshow;
-var slider = document.getElementById('showCaseSlider');
-var slideImages = ["img/showcase1.jpg", "img/showcase2.jpg", "img/showcase3.jpg"];
-var currentImage = 0;
-
-slider.
-
-function changeImg(){
-
-}
-
-
-
+// //Form Validation
+// const name = document.getElementById('formName');
+// const email = document.getElementById('formEmail')
+// const form = document.getElementById('contactForm')
+// const errorElement = document.getElementById('error')
+//
+// form.addEventListener('submit', (e) => {
+//   function validEmail(email) {
+//     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(email);
+//   };
+// })
 
 
-//Form Validation For Contact Form
+
+
+
+
+
+
+
+
+
+
+//Image Slider

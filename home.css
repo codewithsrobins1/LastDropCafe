@@ -13,7 +13,7 @@ header ul li{
   display: inline-block;
   padding: 25px;
   font-size: 1.2em;
-  transition: .1s;
+  transition: .3s;
 }
 
 header ul li:hover{

@@ -142,17 +142,17 @@
         <h5 id="form-title">Feedback</h5>
         <p>Please give us your feedback</p>
       </div>
-        <form>
+        <form id="contactForm" class="" action="home.html" method="post">
           <label for="name">Name:</label>
-          <input type="text" name="name" placeholder="Name:">
+          <input type="text" name="name" id="formName" placeholder="Name:" required>
 
           <label for="email">Email:</label>
-          <input type="text" name="email" placeholder="Email Address:">
+          <input type="text" name="email" id="formEmail" placeholder="Email Address:" required>
 
           <label for="comments">Comments:</label>
-          <textarea name="comments" placeholder="Type your message here..."></textarea>
+          <textarea name="comments" placeholder="Type your message here..." required></textarea>
 
-          <button type="button" name="button">Submit</button>
+          <button type="submit" name="button">Submit</button>
         </form>
     </div>
 
@@ -198,6 +198,6 @@
       </div>
     </footer>
 
-  <script type="text/javascript" src="js/script.js"></script>
+  <!-- <script type="text/javascript" src="js/script.js"></script> -->
   </body>
 </html>

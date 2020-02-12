@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Muli', sans-serif;
   color: #404040;
@@ -14,6 +18,7 @@ header ul li{
   padding: 25px;
   font-size: 1.2em;
   transition: .3s;
+  border-bottom: 2px solid transparent;
 }
 
 header ul li:hover{
@@ -35,11 +40,12 @@ header ul li a{
   vertical-align: middle;
   width: 125px;
   height: 125px;
+  border-bottom: 1px solid transparent;
 }
 
-header li #header-logo img:hover{
-  border-bottom: none;
-}
+/* header li #header-logo img:hover{
+  border-bottom:
+} */
 
 
 /* Showcase */

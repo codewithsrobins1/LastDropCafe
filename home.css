@@ -50,7 +50,7 @@ header ul li a{
 
 /* Showcase */
 .showCase-container{
-  background: url("/img/showcase1.jpg");
+  background: url("img/showcase1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -161,7 +161,7 @@ header ul li a{
 
 /* Address */
 .location-container{
-  background-image: url("/img/hoursshowcase.jpg");
+  background-image: url("img/hoursshowcase.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

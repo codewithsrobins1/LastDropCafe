@@ -1,239 +1,224 @@
+/* Global Reset */
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 html{
   scroll-behavior: smooth;
+  font-family: 'Muli', sans-serif;
 }
 
-body{
-  font-family: 'Muli', sans-serif;
-  color: #404040;
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section{
+  padding: 3rem 0;
+}
+
+.section-title{
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+
+.container{
+  width: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* Nav Bar */
-header ul li{
-  display: inline-block;
-  padding: 25px;
-  font-size: 1.2em;
-  transition: .3s;
-  border-bottom: 2px solid transparent;
-}
-
-header ul li:hover{
-  font-weight: 600;
-  border-bottom: 2px solid #989898;
-}
-
-header ul li a{
-  text-decoration: none;
-  color: inherit;
-}
-
- header nav ul{
-  text-align: center;
-  text-transform: uppercase;
+.mainNav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 #header-logo img{
-  vertical-align: middle;
-  width: 125px;
-  height: 125px;
-  border-bottom: 1px solid transparent;
+  height: 5em;
+  width: 5em;
 }
 
-/* header li #header-logo img:hover{
-  border-bottom:
-} */
+.menu-icons i{
+  font-size: 2.0rem;
+  color: black;
+  cursor: pointer;
+}
 
+.close i{
+  color: red;
+}
+
+.nav-links{
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFCB9C;
+  position: fixed;
+  top: 0;
+  right: -101vw; /* remove from view */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500; /* Higher number = higher stack order or top of stack */
+  transition: all 650ms ease-in-out;
+}
+
+.nav-links.active{
+  right: 0;
+}
+
+.close{
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.nav-links li{
+  margin: 2rem 0;
+}
+
+.nav-links a{
+  font-size: 1.6rem;
+  color: black;
+}
 
 /* Showcase */
 .showCase-container{
-  background: url("img/showcase1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 45vh;
+  background: url('img/showcase1.jpg') center no-repeat;
   background-size: cover;
-  min-height: 750px;
-  text-align: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
 }
+
+/* .showCase-container:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -11;
+} */
 
 .showCase-description{
+  padding: 4rem 2rem;
   color: #fff;
-  font-weight: 700;
-  font-size: 3.5em;
-  text-align: center;
-  padding-top: 200px;
-  text-transform: uppercase;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-  letter-spacing: 3px;
 }
 
-.menu-button{
-  margin-top: 40px;
-  padding: 25px;
+.showCase-description h1{
+  font-size: 2.3rem;
 }
 
-.menu-button button{
-  padding: 20px;
+.showCase-description p{
+  font-size: 1.1rem;
+  padding: 1.5rem 0px;
+}
+
+button{
+  font-size: .7rem;
   text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  background-color: #CD853F;
+  padding: .5rem 1.4rem;
+  border-radius: 1rem;
+  border: none;
   outline: none;
-  border-radius: 15px;
-  font-size: 15px;
-  font-weight: 600;
-  background-color: #b0b0b0;
-  transition: all .3s;
-  opacity: .8;
 }
-
-.menu-button button:hover{
-  color: #fff;
-  font-weight: 600;
-  background-color: dodgerblue;
-  cursor: pointer;
-  transform: scale(1.06);
-  opacity: 1;
-}
-
 
 /* About */
-#aboutMe{
-  text-align: center;
-  margin: 80px 0px;
-}
-
-#aboutMe h1{
-  padding: 25px;
-  font-size: 2.2em;
-}
-
 #aboutMe p{
-  width: 50%;
-  margin: 0px auto;
-  font-size: 1.5em;
-  font-style: italic;
-}
-
-/* Menu Container */
-#menu-container{
   text-align: center;
-}
-
-#menu-container h2{
-  font-size: 2.2em;
-  padding: 15px;
-}
-
-#menu-container p{
-  font-size: 1.2em;
-}
-
-.menu-item{
-  width: 25%;
-  margin: 1.50%;
-  display: inline-block;
-}
-
-.menu-item img{
-  width: 325px;
-  height: 250px;
-  transition: .3s;
-}
-
-.menu-item img:hover{
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.menu-title p{
-  padding: 10px 0px;
-  font-size: 1.3em;
-  font-weight: 600;
-}
-
-.menu-description p{
-  font-style: italic;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
-  color: #CD853F;
+}
+
+/* Menu */
+#menu-container h2{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+#menuContainerDesc{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.menuItems{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* adds responsiveness */
+    /* minmax = box is flexible but has to have a minimum of 25rem */
+  grid-gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-title{
+  text-align: center;
+  padding: .8rem;
   font-weight: 600;
 }
 
-/* Address */
+.menu-description{
+  text-align: center;
+  font-style: italic;
+}
+
+/* Location and Hours */
 .location-container{
-  background-image: url("img/hoursshowcase.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 30vh;
+  background: url('img/hoursshowcase.jpg') center no-repeat;
   background-size: cover;
-  text-align: center;
-  min-height: 600px;
-  width: 72%;
-  margin: 100px auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
 }
 
-.location-container h3{
+.location-info{
   color: #fff;
-  font-weight: 700;
-  font-size: 2.5rem;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 25%;
   text-align: center;
-  padding-top: 125px;
-  text-transform: uppercase;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-  letter-spacing: 3px;
+  font-size: 1.2rem;
 }
 
-
-.location-shop{
-  color: #fff;
-  font-weight: 700;
-  font-size: 2.0rem;
-  text-align: center;
-  padding-top: 80px;
-  text-transform: uppercase;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-  letter-spacing: 3px;
-}
-
-#hours{
-  padding-top: 10px;
-}
-
-/* Instagram */
+/* Gallery */
 .gallery-container{
-  width: 60%;
-  margin: 1% auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* adds responsiveness */
+    /* minmax = box is flexible but has to have a minimum of 25rem */
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
 }
-
-#gallery-instagram h4{
-  text-align: center;
-  font-size: 2.2em;
-  padding: 15px;
-}
-
-.gallery-container img{
-  width: 375px;
-  height: 300px;
-  padding: 5px;
-}
-
 
 /* Feedback */
-#contactUs{
-    margin: 75px 0px;
-}
 .contactUs-description{
   text-align: center;
-
-}
-
-#form-title{
-  font-size: 2.5em;
-  padding: 15px;
 }
 
 .contactUs-description p{
-  font-size: 1.3em;
+  font-size: 1em;
   font-style: italic;
 }
 
@@ -275,6 +260,7 @@ button{
   cursor: pointer;
   transition: background-color .5s;
   text-transform: uppercase;
+  border-radius: 0;
 }
 
 button:hover{
@@ -293,20 +279,24 @@ form label{
   display: block;
 }
 
-
 /* Footer */
 footer{
-  background-color: #d3d3d3;
+  background-color: #CD853F;
 }
 
-.container-footer{
-  margin: 50px 0px;
-  padding-top: 75px;
+/* .info-container{
+
+}
+
+.footer-container{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0px;
 }
 
-.footer-info{
+/* .footer-info{
   padding: 0px 75px;
   font-size: 1.1em;
 }
@@ -328,613 +318,20 @@ footer a:hover{
   transform: scale(1.1);
 }
 
-footer p{
-    padding: 5px 0px;
-}
-
 footer h6{
     font-size: 1.4em;
     padding-bottom: 10px;
 }
 
-footer .info{
-    margin: 100px 0px;
-}
-
 .footer-info i{
   padding-right: 10px;
-}
+} */
 
 footer .copyright{
-    text-align: center;
-    font-weight: bold;
-}
-
-footer ul{
-  list-style-type: none;
+  text-align: center;
+  font-weight: bold;
 }
 
 .copyright{
   padding-bottom: 10px;
-}
-
-/* Media Queries */
-
-/* Smartphones  */
-@media (min-width: 375px) {
-  /* Nav Bar */
-
-  /* Showcase */
-  .showCase-container{
-    background: url("img/showcase1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 600px;
-    text-align: center;
-  }
-
-  .showCase-description{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.0em;
-    text-align: center;
-    padding-top: 200px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  /* About */
-  #aboutMe{
-    text-align: center;
-    margin: 80px 0px;
-  }
-
-  #aboutMe h1{
-    padding: 25px;
-    font-size: 2.0em;
-  }
-
-  #aboutMe p{
-    width: 80%;
-    margin: 0px auto;
-    font-size: .8em;
-    font-style: italic;
-  }
-
-  /* Menu Container */
-  #menu-container{
-    text-align: center;
-  }
-
-  #menu-container h2{
-    font-size: 2.0em;
-    padding: 15px;
-  }
-
-  #menu-container p{
-    font-size: 1.2em;
-  }
-
-  .menu-item{
-    width: 25%;
-    margin: 1.50%;
-    display: inline-block;
-  }
-
-  .menu-item img{
-    width: 225px;
-    height: 150px;
-    transition: .3s;
-  }
-
-  .menu-title p{
-    padding: 10px 0px;
-    font-size: 5em;
-    font-weight: 600;
-  }
-
-  .menu-description p{
-    font-style: italic;
-    width: 100%;
-    margin: 0 auto;
-    color: #CD853F;
-    font-weight: 600;
-  }
-
-  /* Address */
-  .location-container h3{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-align: center;
-    padding-top: 125px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-
-  .location-shop{
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.6rem;
-    text-align: center;
-    padding-top: 80px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  /* Instagram */
-  .gallery-container{
-    width: 90%;
-    margin: 2% auto;
-    text-align: center;
-  }
-
-  #gallery-instagram h4{
-    text-align: center;
-    font-size: 2.2em;
-    padding: 15px;
-  }
-
-  .gallery-container img{
-    width: 275px;
-    height: 200px;
-    padding: 5px;
-  }
-
-
-  /* Feedback */
-  .contactUs-description p{
-    font-size: 1.1em;
-    font-style: italic;
-  }
-
-  /* Footer */
-  .copyright{
-    padding-bottom: 15px;
-  }
-
-  .copyright p{
-    font-size: 12px;
-  }
-}
-
-/* Tablets */
-@media (min-width: 768px) {
-  /* Nav Bar */
-
-  /* Showcase */
-  .showCase-container{
-    background: url("img/showcase1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 650px;
-    text-align: center;
-  }
-
-  .showCase-description{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.7em;
-    text-align: center;
-    padding-top: 220px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  /* About */
-  #aboutMe{
-    text-align: center;
-    margin: 90px 0px;
-  }
-
-  #aboutMe h1{
-    padding: 25px;
-    font-size: 2.5em;
-  }
-
-  #aboutMe p{
-    width: 60%;
-    margin: 0px auto;
-    font-style: italic;
-    font-size: 1.6em;
-  }
-
-  /* Menu Container */
-
-  /* Address */
-
-  /* Instagram */
-
-  /* Feedback */
-
-  /* Footer */
-  .copyright{
-    padding-bottom: 10px;
-  }
-
-  .copyright p{
-    font-size: 15px;
-  }
-}
-
-/* Laptops */
-@media (min-width: 1504px) {
-  /* Nav Bar */
-
-  /* Showcase */
-  .showCase-container{
-    background: url("img/showcase1.jpg") center/cover no-repeat;
-    /* background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
-    min-height: 500px;
-    text-align: center;
-  }
-
-  .showCase-description{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.7em;
-    text-align: center;
-    padding-top: 140px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  .menu-button{
-    margin-top: 10px;
-    padding: 25px;
-  }
-
-  /* About */
-  #aboutMe{
-    text-align: center;
-    margin: 50px 0px;
-  }
-
-  #aboutMe h1{
-    padding: 25px;
-    font-size: 2.2em;
-  }
-
-  #aboutMe p{
-    width: 50%;
-    margin: 0px auto;
-    font-size: 1.2em;
-    font-style: italic;
-  }
-
-  /* Menu Container */
-  #menu-container{
-    text-align: center;
-  }
-
-  #menu-container h2{
-    font-size: 2.2em;
-    padding: 15px;
-  }
-
-  #menu-container p{
-    font-size: 1.1em;
-  }
-
-  .menu-item{
-    width: 25%;
-    margin: 1.50%;
-    display: inline-block;
-  }
-
-  .menu-item img{
-    width: 275px;
-    height: 200px;
-    transition: .3s;
-  }
-
-  .menu-title p{
-    padding: 10px 0px;
-    font-size: 1.3em;
-    font-weight: 600;
-  }
-
-  /* Address */
-  .location-container{
-    background-image: url("img/hoursshowcase.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    min-height: 600px;
-    width: 72%;
-    margin: 100px auto;
-  }
-
-  .location-container h3{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-align: center;
-    padding-top: 125px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-
-  .location-shop{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.0rem;
-    text-align: center;
-    padding-top: 80px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  #hours{
-    padding-top: 10px;
-  }
-
-  /* Instagram */
-  .gallery-container{
-    width: 60%;
-    margin: 1% auto;
-    text-align: center;
-  }
-
-  #gallery-instagram h4{
-    text-align: center;
-    font-size: 2.2em;
-    padding: 15px;
-  }
-
-  .gallery-container img{
-    width: 275px;
-    height: 200px;
-    padding: 5px;
-  }
-
-
-  /* Feedback */
-
-  /* Footer */
-}
-
-/* Extra Extra large devices (large desktop monitors, 2440px and up) */
-@media (min-width: 2440px) {
-  /* Nav Bar */
-
-  /* Showcase */
-  .showCase-container{
-    background: url("img/showcase1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 800px;
-    text-align: center;
-  }
-
-  .showCase-description{
-    color: #fff;
-    font-weight: 700;
-    font-size: 3.5em;
-    text-align: center;
-    padding-top: 230px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  .menu-button{
-    margin-top: 40px;
-    padding: 25px;
-  }
-
-  /* About */
-  #aboutMe{
-    text-align: center;
-    margin: 70px 0px;
-  }
-
-  #aboutMe h1{
-    padding: 25px;
-    font-size: 2.2em;
-  }
-
-  #aboutMe p{
-    width: 50%;
-    margin: 0px auto;
-    font-size: 1.5em;
-    font-style: italic;
-  }
-
-  /* Menu Container */
-  #menu-container{
-    text-align: center;
-  }
-
-  #menu-container h2{
-    font-size: 2.2em;
-    padding: 15px;
-  }
-
-  #menu-container p{
-    font-size: 1.2em;
-  }
-
-  .menu-item{
-    width: 25%;
-    margin: 1.50%;
-    display: inline-block;
-  }
-
-  .menu-item img{
-    width: 325px;
-    height: 250px;
-    transition: .3s;
-  }
-
-  .menu-item img:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-
-  .menu-title p{
-    padding: 10px 0px;
-    font-size: 1.3em;
-    font-weight: 600;
-  }
-
-  .menu-description p{
-    font-style: italic;
-    width: 70%;
-    margin: 0 auto;
-    color: #CD853F;
-    font-weight: 600;
-  }
-
-  /* Address */
-  .location-container{
-    background-image: url("img/hoursshowcase.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    min-height: 600px;
-    width: 71%;
-    margin: 100px auto;
-  }
-
-  .location-container h3{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-align: center;
-    padding-top: 125px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-
-  .location-shop{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2.2rem;
-    text-align: center;
-    padding-top: 80px;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8);
-    letter-spacing: 3px;
-  }
-
-  #hours{
-    padding-top: 10px;
-  }
-
-  /* Instagram */
-  .gallery-container{
-    width: 40%;
-    margin: 1% auto;
-    text-align: center;
-  }
-
-  #gallery-instagram h4{
-    text-align: center;
-    font-size: 2.2em;
-    padding: 15px;
-  }
-
-  .gallery-container img{
-    width: 275px;
-    height: 200px;
-    padding: 5px;
-  }
-
-
-  /* Feedback */
-  #contactUs{
-      margin: 75px 0px;
-  }
-  .contactUs-description{
-    text-align: center;
-
-  }
-
-  #form-title{
-    font-size: 2.5em;
-    padding: 15px;
-  }
-
-  .contactUs-description p{
-    font-size: 1.3em;
-    font-style: italic;
-  }
-
-  form{
-    width: 70%;
-    max-width: 600px;
-    padding: 20px;
-    margin: 50px auto; /*Auto is whats making it centered */
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5)
-  }
-
-  label{
-    display: block; /*block breaks up the elements */
-    padding: 15px 0px;
-  }
-
-  input, textarea{  /*change the size of the input areas and textarea */
-    width: 96%;
-    padding: 10px;
-    border: 1px solid transparent;
-    background-color: #ececec;
-    outline: none;
-    transition: all 0.5s;
-  }
-
-  input:focus, textarea:focus{
-    border: 2px solid #CD853F;
-    background-color: #fff;
-  }
-
-
-  button{
-    padding: 15px 15px;
-    margin: 20px 0px;
-    border: none;
-    background-color: #CD853F;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color .5s;
-    text-transform: uppercase;
-  }
-
-  button:hover{
-    background-color: #3AC7F2;
-    cursor: pointer;
-    font-weight: 600;
-  }
-
-  textarea{
-    min-height: 100px;
-    max-height: 300px;
-    resize: vertical;
-  }
-
-  form label{
-    display: block;
-  }
-
-
-  /* Footer */
-}
+} */

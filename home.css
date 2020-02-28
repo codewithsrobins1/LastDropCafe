@@ -46,7 +46,7 @@ section{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
 }
 
 #header-logo img{
@@ -130,12 +130,12 @@ section{
 }
 
 .showCase-description h1{
-  font-size: 2.3rem;
+  font-size: 1.7rem;
 }
 
 .showCase-description p{
-  font-size: 1.1rem;
-  padding: 1.5rem 0px;
+  font-size: .9em;
+  padding: 1rem 0px;
 }
 
 .showCase-description button{
@@ -144,7 +144,7 @@ section{
   color: #fff;
   font-weight: 600;
   background-color: #CD853F;
-  padding: .8rem 1.4rem;
+  padding: .7rem 1.2rem;
   border-radius: 50px;
   outline: none;
 }
@@ -205,9 +205,13 @@ section{
   position: absolute;
   width: 100%;
   margin: 0 auto;
-  top: 25%;
+  top: 30%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.location-shop{
+  padding-top: 10px;
 }
 
 /* Gallery */
@@ -230,7 +234,7 @@ section{
 }
 
 form{
-  width: 70%;
+  width: 100%;
   max-width: 600px;
   padding: 20px;
   margin: 50px auto; /*Auto is whats making it centered */
@@ -318,6 +322,10 @@ footer .section-title{
   margin-top: 2rem;
 } 
 
+.copyright p{
+  font-size: .9rem;
+}
+
 
 /* Media Queries */
 @media screen and (min-width: 700px){
@@ -381,7 +389,30 @@ footer .section-title{
     margin: 0 auto;
     padding: 0 1.5rem;
   }
+
+  /* Showcase */
+  .showCase-container{
+    height: 50vh;
+    background: linear-gradient(rgba(70, 69, 69, 0.5), rgba(70, 69, 69, 0.5)), url("img/showcase1.jpg");
+    /* background: url('img/showcase1.jpg') center no-repeat; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    bottom: 0;
+  }
+  .showCase-description h1{
+    font-size: 2.2rem;
+    margin-top: 4rem;
+  }
+  
+  .showCase-description p{
+    font-size: 1.1em;
+    padding: 1rem 0px;
+  }
  
+  /* Location and Hours */
   .location-container{
     height: 40vh;
     background: linear-gradient(rgba(70, 69, 69, 0.6), rgba(70, 69, 69, 0.6)), url("img/hoursshowcase.jpg");
@@ -396,7 +427,7 @@ footer .section-title{
   .location-info{
     top: 35%;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 

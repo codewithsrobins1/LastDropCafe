@@ -101,22 +101,27 @@ section{
 /* Showcase */
 .showCase-container{
   height: 45vh;
-  background: url('img/showcase1.jpg') center no-repeat;
+  background: linear-gradient(rgba(70, 69, 69, 0.5), rgba(70, 69, 69, 0.5)), url("img/showcase1.jpg");
+  /* background: url('img/showcase1.jpg') center no-repeat; */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   top: 0;
   bottom: 0;
 }
 
-/* .showCase-container:after{
+/* 
+.showCase-container::after{
+  background: url('img/showcase1.jpg') center no-repeat;
   content: '';
+  opacity: .8;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -11;
+  height: 45vh;
+  z-index: -1;
 } */
 
 .showCase-description{
@@ -184,7 +189,10 @@ section{
 /* Location and Hours */
 .location-container{
   height: 30vh;
-  background: url('img/hoursshowcase.jpg') center no-repeat;
+  background: linear-gradient(rgba(70, 69, 69, 0.9), rgba(70, 69, 69, 0.5)), url("img/hoursshowcase.jpg");
+  /* background: url('img/hoursshowcase.jpg') center no-repeat; */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   top: 0;
@@ -344,7 +352,7 @@ footer .section-title{
   /* Menu */
   .menuItems{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* adds responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); /* adds responsiveness */
       /* minmax = box is flexible but has to have a minimum of 25rem */
     grid-gap: 2.5rem;
     margin-bottom: 2rem;
@@ -367,33 +375,29 @@ footer .section-title{
 
 @media screen and (min-width: 950px){
   .container{
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     max-width: 70rem;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
-
-
-  /* Showcase 
-  .showCase-container{
-    height: 50vh;
+ 
+  .location-container{
+    height: 40vh;
+    background: linear-gradient(rgba(70, 69, 69, 0.6), rgba(70, 69, 69, 0.6)), url("img/hoursshowcase.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    bottom: 0;
   }
 
-  .showCase-description{
-    padding: 6rem 2rem;
+  .location-info{
+    top: 35%;
+    text-align: center;
+    font-size: 1.4rem;
   }
-
-  .showCase-description h1{
-    font-size: 2.6rem;
-  }
-
-  .showCase-description p{
-    font-size: 1.3rem;
-    padding: 1.5rem 0px;
-  } */
-
-  
 }
 
 @media screen and (min-width: 1200px){

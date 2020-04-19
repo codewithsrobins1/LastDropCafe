@@ -100,41 +100,41 @@ section{
 
 /* Showcase */
 .showCase-container{
+  position: relative;
   height: 45vh;
-  background: linear-gradient(rgba(70, 69, 69, 0.5), rgba(70, 69, 69, 0.5)), 
-  url("img/showcase1.jpg"); /* Adds opacity to the background */
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  top: 0;
-  bottom: 0;
 }
 
-/* 
-.showCase-container::after{
-  background: url('img/showcase1.jpg') center no-repeat;
-  content: '';
-  opacity: .8;
+.bg-video {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  height: 45vh;
+  opacity: 1;
+  overflow: hidden;
   z-index: -1;
-} */
+}
+
+.bg-video__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+}
 
 .showCase-description{
   padding: 4rem 2rem;
-  color: #fff;
+  color: #eee;
+  font-weight: 800;
 }
 
 .showCase-description h1{
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
 .showCase-description p{
-  font-size: .9em;
+  font-size: .8em;
   padding: 1rem 0px;
 }
 
@@ -148,6 +148,8 @@ section{
   border-radius: 50px;
   outline: none;
 }
+
+
 
 /* About */
 #aboutMe p{
@@ -327,6 +329,8 @@ footer .section-title{
 }
 
 
+
+
 /* Media Queries */
 @media screen and (min-width: 700px){
   /* Nav */
@@ -360,6 +364,12 @@ footer .section-title{
 
   .nav-link a:hover{
     border-bottom: 2px solid black;
+  }
+
+  /* Showcase */
+  .showCase-description h1{
+    font-size: 2.2rem;
+    margin-top: 2rem;
   }
 
   /* Menu */
@@ -398,22 +408,14 @@ footer .section-title{
   /* Showcase */
   .showCase-container{
     height: 50vh;
-    background: linear-gradient(rgba(70, 69, 69, 0.5), rgba(70, 69, 69, 0.5)), url("img/showcase1.jpg");
-    /* background: url('img/showcase1.jpg') center no-repeat; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    top: 0;
-    bottom: 0;
   }
   .showCase-description h1{
     font-size: 2.2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   
   .showCase-description p{
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 1rem 0px;
   }
  
@@ -437,5 +439,12 @@ footer .section-title{
 }
 
 @media screen and (min-width: 1200px){
+  .showCase-description h1{
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
   
+  .showCase-description p{
+    font-size: 1.2em;
+  }
 }

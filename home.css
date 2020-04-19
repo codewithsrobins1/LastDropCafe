@@ -170,7 +170,7 @@ section{
 .menuItems{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* adds responsiveness */
-    /* minmax = box is flexible but has to have a minimum of 25rem */
+    /* minmax = box is flexible but has to have a minimum of 18rem */
   grid-gap: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -351,6 +351,11 @@ footer .section-title{
     margin: 0px 1rem;
     border-bottom: 2px solid transparent;
     padding-bottom: 5px;
+  }
+
+  .links{
+    display: flex;
+    
   }
 
   .nav-link a:hover{

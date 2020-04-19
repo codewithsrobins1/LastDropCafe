@@ -6,8 +6,13 @@ selectElement('.open').addEventListener('click', () => {
     selectElement('.nav-links').classList.add('active')
 });
 
-//Open the Menu on Click
+//Close the Menu on Click
 selectElement('.close').addEventListener('click', () => {
+    selectElement('.nav-links').classList.remove('active')
+});
+
+//Close the Menu After Click Nav Link
+selectElement('.links').addEventListener('click', () => {
     selectElement('.nav-links').classList.remove('active')
 });
 

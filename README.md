@@ -6,7 +6,7 @@ Fictional coffee shop website with a single-page design.
 
 https://codewithsrobins1.github.io/LastDropCafe/
 
-## Objective
+## Objectives
 
 * Build a website for a potential coffee shop with no online presence
 * Practice fundamentals of HTML and CSS then implement Javascript
